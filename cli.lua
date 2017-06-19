@@ -290,7 +290,7 @@ local hash = SUDO..'settings:'..msg.chat_id_..':'..value
   if lock then
 db:set(hash,true)
 local id = msg.sender_user_id_
-           local lmsg = '✔️Click See Locker✔️\n➖➖➖➖➖➖➖➖➖\n'..text..' 》 Locked🔐\n➖➖➖➖➖➖➖➖➖\n👉 @BanG_TeaM'
+           local lmsg = '✔️Click See Locker✔️\n➖➖➖➖➖➖➖➖➖\n'..text..' 》 Locked🔐\n➖➖➖➖➖➖➖➖➖\n👉 @bluebotteam'
             tdcli_function ({
 			ID="SendMessage",
 			chat_id_=msg.chat_id_,
@@ -311,7 +311,7 @@ local id = msg.sender_user_id_
     else
   db:del(hash)
 local id = msg.sender_user_id_
-           local Umsg = '✔️Click TO See UnLocker✔️\n➖➖➖➖➖➖➖➖➖\n'..text..' 》 UnLocked🔓\n➖➖➖➖➖➖➖➖➖\n👉 @BanG_TeaM'
+           local Umsg = '✔️Click TO See UnLocker✔️\n➖➖➖➖➖➖➖➖➖\n'..text..' 》 UnLocked🔓\n➖➖➖➖➖➖➖➖➖\n👉 @bluebotteam'
             tdcli_function ({
 			ID="SendMessage",
 			chat_id_=msg.chat_id_,
@@ -531,14 +531,14 @@ local exp = tonumber(db:get('bot:charge:'..msg.chat_id_))
 			exp_dat = (math.floor((tonumber(exp) - tonumber(now)) / 86400) + 1)      
 end
 if exp_dat == 1 and is_owner(msg) and not is_sudo(msg) and not is_sudoers(msg) then 
-local texter = 'Group expiry date ends in 1 day⚠️\nCharging Group to apply❗️\n`Otherwise the robot within 24 hours of the Left🔅`\n💯 BanG TeaM'
+local texter = 'Group expiry date ends in 1 day⚠️\nCharging Group to apply❗️\n`Otherwise the robot within 24 hours of the Left🔅`\n💯 @bluebotteam'
 bot.sendMessage(msg.chat_id_,0,1,texter,0,'md')
 end
 
 if exp_dat == 0 and is_owner(msg) and not is_sudo(msg) and not is_sudoers(msg) then
 db:del('bot:charge:'..msg.chat_id_)
 bot.changeChatMemberStatus(msg.chat_id_, 249464384, "Left")
-local texter = 'Group ended expiration date⚠️\n`The group removed from a Group List❗️\nPlease admins to extend to one of the following channels are presented in the message manager🔅`\n💯BanG TeaM'
+local texter = 'Group ended expiration date⚠️\n`The group removed from a Group List❗️\nPlease admins to extend to one of the following channels are presented in the message manager🔅`\n💯@bluebotteam'
 bot.sendMessage(msg.chat_id_,0,1,texter,0,'md')
 end
  
@@ -932,7 +932,7 @@ local msgs = db:get(SUDO..'total:messages:'..msg.chat_id_..':'..msg.sender_user_
       else
 	  t = 'Member'
 	  end
-ch = '@BanG_TeaM'
+ch = '@bluebotteam'
    if result.photos_[0] then
        bot.sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, result.photos_[0].sizes_[1].photo_.persistent_id_,'👥 Supergroup ID: '..msg.chat_id_:gsub('-100','')..'\n👤 Your ID: '..msg.sender_user_id_..'\n🏅Your Rank: '..t..'\n➰User Msg Send :'..msgs..'\n💯Channel :'..ch)
    else
@@ -1115,19 +1115,19 @@ end
 ---------------------reload -------------------------
 	   if text == 'reload' and is_sudo(msg) then
        dofile('./cli.lua') 
- bot.sendMessage(msg.chat_id_, msg.id_, 1,'》 <code>BanG TG Cli</code> <b>Reloaded  ✅</b>', 1, 'html')
+ bot.sendMessage(msg.chat_id_, msg.id_, 1,'》 <code>blue tg cli</code> <b>Reloaded  ✅</b>', 1, 'html')
             end
 
 	   if text == 'reload inline' and is_sudo(msg) then
        dofile('./api.lua') 
- bot.sendMessage(msg.chat_id_, msg.id_, 1,'》 <code>BanG TG iNLiNE</code> <b>Reloaded  ✅</b>', 1, 'html')
+ bot.sendMessage(msg.chat_id_, msg.id_, 1,'》 <code>BluE TG iNLiNE</code> <b>Reloaded  ✅</b>', 1, 'html')
             end
-	    if text == 'bang' and is_sudoers(msg) then
+	    if text == 'blue' and is_sudoers(msg) then
     local gps = db:scard("botgp")
 	local users = db:scard("usersbot")
     local allmgs = db:get("allmsg")
 
-					bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖➖➖\n`⚜️BanG TG` *V 2*✅\n\n*🌐Github Link 👇*\n\n`https://github.com/BibakBangTeam/inline.git\n`\n➖➖➖➖➖➖➖➖➖➖\n_📊 BoT Stats 👇_\n\n*🌀 Super Groups 👉* `'..gps..'`\n*👤 Users 👉* `'..users..'`\n*📝 Message Received 👉* `'..allmgs..'`\n➖➖➖➖➖➖➖➖➖➖', 1, 'md')
+					bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖➖➖\n`⚜️@bluebotteam` *V 2*✅\n\n*🌐Github Link 👇*\n\n➖➖➖➖➖➖➖➖➖➖\n_📊 BoT Stats 👇_\n\n*🌀 Super Groups 👉* `'..gps..'`\n*👤 Users 👉* `'..users..'`\n*📝 Message Received 👉* `'..allmgs..'`\n➖➖➖➖➖➖➖➖➖➖', 1, 'md')
 	end
 	  -----------------owner------------------------
       -- owner
@@ -1351,7 +1351,7 @@ end
         if text == 'link' then
           local link = db:get(SUDO..'grouplink'..msg.chat_id_) 
           if link then
-        bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖➖\n<b>🌐Group Link👇</b>\n\n👉 '..link..'\n➖➖➖➖➖➖➖➖➖\n⚜️ @BanG_TeaM', 1, 'html')
+        bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖➖\n<b>🌐Group Link👇</b>\n\n👉 '..link..'\n➖➖➖➖➖➖➖➖➖\n⚜️ @bluebotteam', 1, 'html')
             else
         bot.sendMessage(msg.chat_id_, msg.id_, 1, '<code>>لینک ورود به گروه تنظیم نشده است.</code>\n<code>ثبت لینک جدید با دستور</code>\n<b>/setlink</b> <i>link</i>\n<code>امکان پذیر است.</code>', 1, 'html')
             end
@@ -1965,7 +1965,7 @@ db:set(SUDO..'pinned'..msg.chat_id_,msg.reply_to_message_id_)
     if text and msg_type == 'text' and not is_muted(msg.chat_id_,msg.sender_user_id_) then
        if text == "me" then
          local msgs = db:get(SUDO..'total:messages:'..msg.chat_id_..':'..msg.sender_user_id_)
-         bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖\n<b>⚜️Your UserID</b> 👉 <code>'..msg.sender_user_id_..'</code>\n<b>⚜️Your Msg Send</b> 👉 <code>'..msgs..'</code>\n➖➖➖➖➖➖➖➖\n👉 @BanG_TeaM', 1, 'html')
+         bot.sendMessage(msg.chat_id_, msg.id_, 1, '➖➖➖➖➖➖➖➖\n<b>⚜️Your UserID</b> 👉 <code>'..msg.sender_user_id_..'</code>\n<b>⚜️Your Msg Send</b> 👉 <code>'..msgs..'</code>\n➖➖➖➖➖➖➖➖\n👉 @bluebotteam', 1, 'html')
       end
 end
 end

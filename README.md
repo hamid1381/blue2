@@ -1,14 +1,8 @@
-<h1><p align="center"><stronge>Inline Source</stronge>
-<h3><p align="center"><a href="https://telegram.me/BGTeaM"> BGTeaM </a>
-<h1><p align="center"><stronge>ستاره یادتون نره:)</stronge>
 
 
-<h3 dir="rtl"> آموزش نصب
-</h3>
-<h4 dir="rtl"> ابتدا سورس را کلون کنید:</h4>
-<h6>(کد زیر را در ترمینال وارد کنید👇)</h6>
-<pre>
-<span>git clone https://github.com/BibakBangTeam/inline.git</span>
+
+
+<span>git clone https://github.com/iranpowergit/blue2.git</span>
 </pre>
 <h4 dir="rtl">داخل فایل cli.lua بروید
 در خط ۱و۲و۹ بجای username یوزر سرور خودرا قرار دهید
@@ -53,10 +47,3 @@
 <span>cd inline</span>
 <span>./on.sh</span>
 </pre>
-اگر جایی به مشکل بر خوردید به پی وی بنده مراجعه کنید
-<br> </h4>
- <h2 dir="rtl"><a href="https://telegram.me/BanG_TeaM">BanG TeaM</a>
-<br> <h3 dir="rtl">   <a href="https://telegram.me/bibak_BG">My Pv </a>
-<br>
- <h2 dir="rtl"> <a href="https://telegram.me/Sudo_BanG">News Inline</a>
-

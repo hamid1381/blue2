@@ -7,8 +7,8 @@ https = require "ssl.https"
 redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
 BASE = '/home/root/blue2/'
-SUDO = 261764158 -- sudo id
-sudo_users = {261764158,Userid}
+SUDO =  276956402 -- sudo id
+sudo_users = { 276956402,354987409}
 BOTS = 249464384 -- bot id
 bot_id = db:get(SUDO..'bot_id')
 db:set(SUDO..'bot_on',"on")
@@ -1311,7 +1311,7 @@ end
             end
           tdcli_function({
       ID = "GetInlineQueryResults",
-      bot_user_id_ = 386343615,
+      bot_user_id_ = 446049792,
       chat_id_ = msg.chat_id_,
       user_location_ = {
         ID = "Location",
